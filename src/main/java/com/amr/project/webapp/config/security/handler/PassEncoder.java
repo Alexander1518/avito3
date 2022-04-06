@@ -10,7 +10,4 @@ public class PassEncoder {
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder(5);
     }
-
-
-
 }

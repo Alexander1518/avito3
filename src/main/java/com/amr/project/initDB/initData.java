@@ -119,17 +119,17 @@ public class initData {
         Image logoImage1 = Image.builder().picture(arrayLogoImage1).isMain(true).build();
         imageRepository.save(logoImage1);
 
-        File user_avatar1 = ResourceUtils.getFile("classpath:static/images/userAvatar/avatar1.jpg");
-        byte[] arrayUserAvatar1 = Files.readAllBytes(user_avatar1.toPath());
-        Image userAvatar1 = Image.builder().picture(arrayUserAvatar1).isMain(true).build();
-        imageRepository.save(userAvatar1);
-        File user_avatar2 = ResourceUtils.getFile("classpath:static/images/userAvatar/avatar2.jpg");
-        byte[] arrayUserAvatar2 = Files.readAllBytes(user_avatar2.toPath());
-        Image userAvatar2 = Image.builder().picture(arrayUserAvatar2).isMain(true).build();
-        imageRepository.save(userAvatar2);
-        File user_avatar3 = ResourceUtils.getFile("classpath:static/images/userAvatar/avatar3.jpg");
-        byte[] arrayUserAvatar3 = Files.readAllBytes(user_avatar3.toPath());
-        Image userAvatar3 = Image.builder().picture(arrayUserAvatar3).isMain(true).build();
+//        File user_avatar1 = ResourceUtils.getFile("classpath:static/images/userAvatar/avatar1.jpg");
+//        byte[] arrayUserAvatar1 = Files.readAllBytes(user_avatar1.toPath());
+//        Image userAvatar1 = Image.builder().picture(arrayUserAvatar1).isMain(true).build();
+//        imageRepository.save(userAvatar1);
+//        File user_avatar2 = ResourceUtils.getFile("classpath:static/images/userAvatar/avatar2.jpg");
+//        byte[] arrayUserAvatar2 = Files.readAllBytes(user_avatar2.toPath());
+//        Image userAvatar2 = Image.builder().picture(arrayUserAvatar2).isMain(true).build();
+//        imageRepository.save(userAvatar2);
+//        File user_avatar3 = ResourceUtils.getFile("classpath:static/images/userAvatar/avatar3.jpg");
+//        byte[] arrayUserAvatar3 = Files.readAllBytes(user_avatar3.toPath());
+//        Image userAvatar3 = Image.builder().picture(arrayUserAvatar3).isMain(true).build();
 //        imageRepository.save(userAvatar1);
 
 //        List<Image> imageList = new ArrayList<>();

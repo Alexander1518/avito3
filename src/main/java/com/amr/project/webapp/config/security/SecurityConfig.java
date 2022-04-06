@@ -23,16 +23,16 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-
-
-    @Autowired
-    private UserDetailsService userDetailsService;
-
-    @Autowired
-    private CustomWebAuthenticationDetailsSource authenticationDetailsSource;
+    private final UserDetailsService userDetailsService;
+    private final CustomWebAuthenticationDetailsSource authenticationDetailsSource;
+    private final PassEncoder passwordEncoder;
 
     @Autowired
-    private PassEncoder passwordEncoder;
+    public SecurityConfig(UserDetailsService userDetailsService, CustomWebAuthenticationDetailsSource authenticationDetailsSource, PassEncoder passwordEncoder) {
+        this.userDetailsService = userDetailsService;
+        this.authenticationDetailsSource = authenticationDetailsSource;
+        this.passwordEncoder = passwordEncoder;
+    }
 
     @Bean
     @Override
