@@ -23,6 +23,10 @@ import java.util.List;
 public class MainPageController {
 
     private final UserService userService;
+    @GetMapping("/login")
+    public String login() {
+        return "login";
+    }
 
     @GetMapping
     public String returnMainPage (@AuthenticationPrincipal User user, Model model) {
