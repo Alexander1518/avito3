@@ -10,6 +10,7 @@ import com.amr.project.model.dto.ImageDto;
 import com.amr.project.model.dto.UserDto;
 import com.amr.project.model.entity.Image;
 import com.amr.project.model.entity.User;
+import com.amr.project.model.enums.Provider;
 import com.amr.project.model.enums.Roles;
 import com.amr.project.service.abstracts.UserService;
 import com.amr.project.service.email.MailSender;
@@ -158,5 +159,18 @@ public class UserServiceImpl implements UserService {
         user.setImages(imageList);
         userRepository.saveAndFlush(user);
         return imageMapper.toDtoList(user.getImages(), new CycleAvoidingMappingContext());
+    }
+
+    @Override
+    public void processOAuthPostLogin(String username) {
+        User existUser = userRepository.getUserByUsername(username);
+
+        if (existUser == null) {
+            User newUser = new User();
+            newUser.setUsername(username);
+            newUser.setProvider(Provider.GOOGLE);
+
+            userRepository.save(newUser);
+        }
     }
 }

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/")
-public class QiwiController {
+public class  QiwiController {
     private final QiwiService qiwiService;
     private final OrderRepository orderService;
 

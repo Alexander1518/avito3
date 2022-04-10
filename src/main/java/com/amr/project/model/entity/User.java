@@ -1,12 +1,14 @@
 package com.amr.project.model.entity;
 
+import com.amr.project.model.enums.Provider;
 import com.amr.project.model.enums.Roles;
 import lombok.*;
 import org.hibernate.Hibernate;
 import org.jboss.aerogear.security.otp.api.Base32;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.*;
 import java.util.*;
 
@@ -38,6 +40,8 @@ public class User implements UserDetails {
     private String activationCode;
     private boolean isUsing2FA;
     private String secret;
+    @Enumerated(EnumType.STRING)
+    private Provider provider;
 
 
     public User() {

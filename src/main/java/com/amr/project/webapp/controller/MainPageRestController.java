@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.*;
 import com.amr.project.converter.CycleAvoidingMappingContext;
 import org.springframework.data.domain.Pageable;
 
+import java.security.Principal;
+
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/main")
@@ -21,6 +23,7 @@ public class MainPageRestController {
     private final ItemService itemService;
     private final ShopService shopService;
     private final CategoryService categoryService;
+
 
 
     @GetMapping("/search")
